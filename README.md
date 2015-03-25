@@ -1,5 +1,5 @@
 # AMAUnmissable
-AMAUnmissable - make the unmissable, unmissable.  Automatically opens AMA/other subreddit posts as soon as they are posted.  Has a GUI option window and then runs in background, checking posts at a user defined interval
+AMAUnmissable - make the unmissable, unmissable.  Automatically opens AMA/other subreddit posts as soon as they are posted.  Has a GUI option window and then runs in background, checking posts at a user defined interval (default of 30 seconds).
 
 # Requirements
 
