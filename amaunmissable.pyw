@@ -11,9 +11,10 @@ run = False
 SUBREDDIT = "iama"
 
 def go():
-    global watch_words, REFRESH_RATE, run
+    global watch_words, REFRESH_RATE, run, SUBREDDIT
     watch_words = words_entry.get("0.0", END).split("\n")
     REFRESH_RATE = int(refresh_entry.get())
+    SUBREDDIT = sub_entry.get()
     run = True
     root.destroy()
 
@@ -89,7 +90,7 @@ r = praw.Reddit(user_agent="AMA Checker by /u/JWStarfish")
 def run():
     global watch_words
     watch_words = [w for w in watch_words if not w == "\n" and not w == ""]
-    submissions = r.get_subreddit("iama").get_new(limit=LIMIT)
+    submissions = r.get_subreddit(SUBREDDIT).get_new(limit=LIMIT)
     
     keepalive = True
     for i in range(LIMIT):
